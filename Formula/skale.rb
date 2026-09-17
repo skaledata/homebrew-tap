@@ -5,21 +5,21 @@
 class Skale < Formula
   desc "SkaleData CLI — manage clusters, apps, and deployments"
   homepage "https://skaledata.com"
-  version "0.1.10"
+  version "0.1.11"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skaledata/cli/releases/download/v0.1.10/skale_0.1.10_darwin_amd64.tar.gz"
-      sha256 "788e3e5ecd8725efdf570297d0fede0a3efb72300788032dd01af90ab71046d2"
+      url "https://github.com/skaledata/cli/releases/download/v0.1.11/skale_0.1.11_darwin_amd64.tar.gz"
+      sha256 "cbc747c9efcb7db130824894ff406032568c666c3af31e48bc1cc3fe0e495209"
 
       define_method(:install) do
         bin.install "skale"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skaledata/cli/releases/download/v0.1.10/skale_0.1.10_darwin_arm64.tar.gz"
-      sha256 "268683d46635f638f0a2b77bc798c43c7ddf2bd46390b6b774df98b58c5e020a"
+      url "https://github.com/skaledata/cli/releases/download/v0.1.11/skale_0.1.11_darwin_arm64.tar.gz"
+      sha256 "42cc4eae57f611a037b604a9d2b9695495854ec5a23f7bc20b2916e69568fa2d"
 
       define_method(:install) do
         bin.install "skale"
@@ -29,15 +29,15 @@ class Skale < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skaledata/cli/releases/download/v0.1.10/skale_0.1.10_linux_amd64.tar.gz"
-      sha256 "8f95cb89fd8ee23535154c72f9697feca8b04d3552746100bd2e8e10262b85a8"
+      url "https://github.com/skaledata/cli/releases/download/v0.1.11/skale_0.1.11_linux_amd64.tar.gz"
+      sha256 "3aee4ee8a07166b103e5247250a3fd350698c74f730d58d14ae885e6f4d9afbc"
       define_method(:install) do
         bin.install "skale"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skaledata/cli/releases/download/v0.1.10/skale_0.1.10_linux_arm64.tar.gz"
-      sha256 "d4403ddeaa639c0ba0d65fd87864274b1e605a18203ff81c2b98324689e334e8"
+      url "https://github.com/skaledata/cli/releases/download/v0.1.11/skale_0.1.11_linux_arm64.tar.gz"
+      sha256 "b7fbbd427abf04331e6451e92a3215b07db0c6dcea437723de89548ecc52c28b"
       define_method(:install) do
         bin.install "skale"
       end
